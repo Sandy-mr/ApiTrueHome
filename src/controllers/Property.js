@@ -12,7 +12,8 @@ exports.index = function (req, res) {
         res.json({
             status: "success",
             message: "Property retrieved successfully",
-            data: propertys
+            data: propertys,
+            total: propertys.length
         });
     });
 };
