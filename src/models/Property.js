@@ -16,8 +16,8 @@ var propertySchema = mongoose.Schema({
     address: {
         type: String
     },
-    phone: {
-        type: String
+    price: {
+        type: Number
     },
     create_date: {
         type: Date,
