@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 // Import express
 let express = require('express')
 // Import Body parser
@@ -12,9 +14,10 @@ const logger = require('morgan')
 let app = express()
 // Import routes
 let apiRoutes = require('./src/routes/api')
-// URL MONGO0SE
-let RESTAPI = 'mongodb://localhost/resthub'
-
+// URL  local
+// const RESTAPI = 'mongodb://localhost/resthub'
+// URL  mlab
+const RESTAPI = process.env.API_URL
 // Connect to Mongoose and set connection variable
 mongoose.connect(
   RESTAPI,
